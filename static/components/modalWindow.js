@@ -1,94 +1,95 @@
-import { LitElement, html, css} from 'https://unpkg.com/lit?module';
+import { LitElement, html, css } from 'https://unpkg.com/lit?module';
 
 export class ModalWindow extends LitElement {
     static styles = css`
-    :host{
-        background-color: var(--cardColor);
-        width: 30rem;
-        height: 40rem;
-        box-shadow: 0px 8px 20px #000000;
-        border-radius: 10px;
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-
-    .cancel{
-        cursor: pointer;
-        padding: 1rem;
-        text-align: right;
-        font-size: 28px;
-    }
-
-    .modal__contnr{
-        padding-inline: 4rem;
-    }
-
-    .title__text, .descrip__text{
-        margin-block-end: 0.5rem;
-        font-size: 1.5rem;
-    }
-    .title__input, .descrip__input{
-        width: 94%;
-        margin-block-end: 2rem;
-        background-color: var(--inputColor);
-        border: 2px solid var(--inputColor);
-        border-radius: 5px;
-        color: var(--mainThemeTextColor);
-        padding: 0.5rem;
-        font-size: 1.2rem;
-    }
-    .title__input:focus, .descrip__input:focus{
-        -webkit-appearance: none; 
-        outline: none;
-        border: 2px solid var(--primaryColor);
-    }
-    .title__input{
-        height: 2.5rem;
-    }
-    .title__input::placeholder{
-        font-weight: bold;
-        color: #fa7f81;
-    }
-    .descrip__input{
-        resize: none;
-    }
-
-    .btn__contnr{
-        text-align: center;
-    }
-    .btn__save{
-        color: var(--mainThemeTextColor);
-        border: none;
-        background-color: var(--action);
-        border-radius: 8px;
-        height: 3.5rem;
-        width:60%;
-        cursor: pointer
-    }
-    .btn__save:active{
-        background-color: var(--actionAccent);
-    }
-
-    @media screen and (min-width: 1000px){
         :host{
-            width: 40rem;
-            height: 48rem;
+            background-color: var(--cardColor);
+            width: 30rem;
+            height: 40rem;
+            box-shadow: 0px 8px 20px #000000;
+            border-radius: 10px;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
         }
+
+        .cancel{
+            cursor: pointer;
+            padding: 1rem;
+            text-align: right;
+            font-size: 28px;
+        }
+
+        .modal__contnr{
+            padding-inline: 4rem;
+        }
+
         .title__text, .descrip__text{
-            font-size: 1.8rem; 
+            margin-block-end: 0.5rem;
+            font-size: 1.5rem;
         }
         .title__input, .descrip__input{
-            font-size: 1.8rem; 
+            width: 94%;
+            margin-block-end: 2rem;
+            background-color: var(--inputColor);
+            border: 2px solid var(--inputColor);
+            border-radius: 5px;
+            color: var(--mainThemeTextColor);
+            padding: 0.5rem;
+            font-size: 1.2rem;
+        }
+        .title__input:focus, .descrip__input:focus{
+            -webkit-appearance: none; 
+            outline: none;
+            border: 2px solid var(--primaryColor);
+        }
+        .title__input{
+            height: 2.5rem;
+        }
+        .title__input::placeholder{
+            font-weight: bold;
+            color: #fa7f81;
+        }
+        .descrip__input{
+            resize: none;
+        }
+
+        .btn__contnr{
+            text-align: center;
         }
         .btn__save{
-            font-size: 1.8rem; 
-            height: 4.5rem;
+            color: var(--mainThemeTextColor);
+            border: none;
+            background-color: var(--action);
+            border-radius: 8px;
+            height: 3.5rem;
+            width:60%;
+            cursor: pointer
         }
-    }
-`;
+        .btn__save:active{
+            background-color: var(--actionAccent);
+        }
+
+        @media screen and (min-width: 1000px){
+            :host{
+                width: 40rem;
+                height: 48rem;
+            }
+
+            .title__text, .descrip__text{
+                font-size: 1.8rem; 
+            }
+            .title__input, .descrip__input{
+                font-size: 1.8rem; 
+            }
+            
+            .btn__save{
+                font-size: 1.8rem; 
+                height: 4.5rem;
+            }
+        }`;
 
     constructor() {
         super();
