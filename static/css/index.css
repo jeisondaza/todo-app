@@ -1,0 +1,79 @@
+:root{
+    --font-family: 'Roboto', sans-serif;
+
+    --mainThemeColor: #313131;
+    --mainThemeTextColor :#fff;
+    --cardColor: #565656;
+    --cardChecked:#2b2b2b;
+    --inputColor: #808080;
+
+    --primaryColor: #0784F8;
+    --primaryColorH: #086ecc;
+    --primaryAccent: #22588a;
+    --checkedColor: #636363;
+    --danger: #F21010;
+    --action: #00B633;
+    --actionAccent: #199e3f;
+
+    --ulBtnS: 7rem;
+    --ulBtnM: 10rem;
+    --ulBtnL: 13rem;
+
+    --paddingMobile: 1rem;
+    --paddingTablet: 6rem;
+    --paddingDesktop: 20rem;
+}
+*{
+    margin: 0;
+}
+html{
+    font-family: var(--font-family);
+    font-size: 62.5%;;
+}
+body{
+    color: var(--mainThemeTextColor );
+    background-color: var(--mainThemeColor);
+    padding: var(--paddingMobile);
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 0.7rem;
+}
+
+.toDos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    width: 100%;
+    padding-block-start: 0.5rem;
+}
+
+
+@media screen and (min-width: 700px){
+    body{
+        font-size: 1.5rem;
+        padding-inline: var(--paddingTablet);
+    }
+    .toDos{
+        padding-block-start: 0;
+    }
+}
+@media screen and (min-width: 1000px){
+    body{
+        font-size: 1.8rem;
+        padding-inline: var(--paddingDesktop);
+    }
+    .toDos{
+        row-gap: 1.5rem;
+    }
+}
